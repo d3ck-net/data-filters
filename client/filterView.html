@@ -1,0 +1,22 @@
+<template name="filterBar">
+    <span class="filterBar {{name}}">
+        <div class="editor"></div>
+        {{>textSearch}}
+        {{>searchBar}}
+        {{>searchMenu}}
+    </span>
+</template>
+
+<template name="textSearch">
+    <input name="textSearch"/>
+</template>
+
+<template name="searchBar">
+    {{#each searches}}
+    {{/each}}
+
+</template>
+
+<template name="searchMenu">
+    <div class="filterIcon glyphicon glyphicon-filter"></div>
+</template>
