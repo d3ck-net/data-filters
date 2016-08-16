@@ -14,9 +14,12 @@ Package.onUse(function (api) {
     api.versionsFrom('1.3');
     api.use('templating', 'client');
     api.use('blaze-html-templates');
+    api.use('less');
+    api.use('msgfmt:core');
     // api.use('ui');
 
-    api.addFiles(['client/filterView.html'], 'client');
+    api.addFiles('client/filterView.html', 'client');
+    api.addFiles('client/style.less', 'client');
     api.mainModule('client/filterView.js', 'client');
 });
 

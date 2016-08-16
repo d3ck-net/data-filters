@@ -2,20 +2,17 @@
     <span class="filterBar {{name}}">
         <div class="editor"></div>
         {{>textSearch}}
-        {{>searchBar}}
         {{>searchMenu}}
     </span>
 </template>
 
 <template name="textSearch">
-    <input name="textSearch"/>
+    <label for="textSearch">
+        {{mf 'dict.search' "search:"}}
+        <input class="textSearch" name="textSearch"/>
+    </label>
 </template>
 
-<template name="searchBar">
-    {{#each searches}}
-    {{/each}}
-
-</template>
 
 <template name="searchMenu">
     <div class="filterIcon glyphicon glyphicon-filter"></div>

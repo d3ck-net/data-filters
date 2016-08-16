@@ -1,7 +1,8 @@
+import {FilterConfig} from "./FilterConfig";
 export class Filter
 {
-    private name:string;
-    private data:Object;
+    private config:FilterConfig;
+    private current:Object;
 
     public getMongoSearch():Object
     {
@@ -11,5 +12,10 @@ export class Filter
     public restoreFromData(data:Object)
     {
         
+    }
+
+    public getCurrentFilter():Object
+    {
+        return this.current;
     }
 }

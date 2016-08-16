@@ -5,12 +5,12 @@ Template.searchMenu.onRendered(function () {
 
 Template.searchMenu.events({
     'click .filterIcon': function () {
-        debugger;
+        
     }
 });
 
 Template.filterBar.onRendered(function(){
-    
+
     var ed = $('.editor');
     var name = ed.closest('.filterBar');
     ed.queryBuilder({
@@ -24,4 +24,11 @@ Template.filterBar.onRendered(function(){
             'invert'
         ],
         filters: [{id: 'name', label: 'name', type: 'string'}]});
-})
+});
+
+Template.searchBar.helpers({
+    current:function()
+    {
+        debugger;
+    }
+});
