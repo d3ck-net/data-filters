@@ -1,5 +1,5 @@
 Package.describe({
-    name: 'dasdeck:package-filters',
+    name: 'dasdeck:data-filters',
     version: '0.0.1',
     // Brief, one-line summary of the package.
     summary: 'add customizable filters to table views',
@@ -15,7 +15,7 @@ Package.onUse(function (api) {
     api.use('templating', 'client');
     api.use('blaze-html-templates');
     api.use('less');
-    api.use('msgfmt:core');
+    // api.use('msgfmt:core');
     // api.use('ui');
 
     api.addFiles('client/filterView.html', 'client');

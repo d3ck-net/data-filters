@@ -25,10 +25,3 @@ Template.filterBar.onRendered(function(){
         ],
         filters: [{id: 'name', label: 'name', type: 'string'}]});
 });
-
-Template.searchBar.helpers({
-    current:function()
-    {
-        debugger;
-    }
-});
