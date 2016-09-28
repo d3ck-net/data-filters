@@ -15,12 +15,23 @@ Package.onUse(function (api) {
     api.use('templating', 'client');
     api.use('blaze-html-templates');
     api.use('less');
-    // api.use('msgfmt:core');
-    // api.use('ui');
+    api.use('ecmascript');
+    api.use('mongo');
+    api.use('underscore');
+    api.use('dasdeck:restcollection');
+    api.use('barbatus:typescript');
 
     api.addFiles('client/filterView.html', 'client');
     api.addFiles('client/style.less', 'client');
-    api.mainModule('client/filterView.js', 'client');
+    api.addFiles('Filter.ts');
+
+    api.addFiles('server/startup.js', 'server');
+    api.addFiles('lib/startup.js');
+
+
+    api.addFiles('client/filterView.js', 'client');
+
+
 });
 
 Package.onTest(function (api) {
