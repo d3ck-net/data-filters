@@ -29,17 +29,16 @@ Template.filterBar.onRendered(function () {
 
         var found = false;
         var fullTextFields = [];
-        $.each(this.data.schema,function(i,o){
+        $.each(this.data.schema, function (i, o) {
             found |= o.id === '$fulltext';
 
             fullTextFields.push(o.id);
 
         });
-        if(!found)
-        {
+        if (!found) {
             this.data.schema.push({
                 id: '$fulltext',
-                label: mf('fullText',{},'any column'),
+                label: 'any column',
                 type: 'string',
                 operators: [
                     'contains',
@@ -72,11 +71,10 @@ Template.filterBar.onRendered(function () {
                 'bt-checkbox',
                 'invert'
             ],
-            default_filter:'$fulltext',
+            default_filter: '$fulltext',
             filters: this.data.schema
         });
-        if(this.data.callbacks)
-        {
+        if (this.data.callbacks) {
             var events = [
                 'afterAddGroup.queryBuilder',
                 'afterDeleteGroup.queryBuilder',
@@ -100,7 +98,7 @@ Template.filterBar.onRendered(function () {
                 'change',
                 'keyup'
             ];
-            ed.on(events.join(' '),_.debounce(this.data.callbacks.change,100));
+            ed.on(events.join(' '), _.debounce(this.data.callbacks.change, 100));
         }
         // debugger;
         // var instance = Template.instance();

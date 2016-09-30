@@ -21,6 +21,8 @@ Package.onUse(function (api) {
     api.use('dasdeck:restcollection');
     api.use('barbatus:typescript');
 
+    api.use('dasdeck:jquery-query-builder');
+
     api.addFiles('client/filterView.html', 'client');
     api.addFiles('client/style.less', 'client');
     api.addFiles('Filter.ts');
